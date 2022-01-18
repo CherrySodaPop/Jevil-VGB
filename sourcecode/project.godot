@@ -26,11 +26,11 @@ settings/stdout/print_fps=true
 
 [display]
 
-window/size/width=170
-window/size/height=96
+window/size/width=180
+window/size/height=150
 window/size/resizable=false
-window/size/test_width=510
-window/size/test_height=288
+window/size/test_width=540
+window/size/test_height=450
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 

@@ -10,4 +10,4 @@ func _ready():
 func _process(delta):
 	if (Input.is_action_just_pressed("fullscreen")):
 		OS.window_fullscreen = !OS.window_fullscreen;
-		OS.window_size = Vector2(170*3,96*3);
+		OS.window_size = Vector2(180*3,150*3);

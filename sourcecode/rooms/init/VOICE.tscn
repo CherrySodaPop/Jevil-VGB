@@ -6,7 +6,6 @@
 [node name="VOICE" type="Node2D"]
 z_index = 10
 script = ExtResource( 2 )
-WORDS = "STRANGE."
 
 [node name="TALK0" type="RichTextLabel" parent="."]
 margin_right = 531.0

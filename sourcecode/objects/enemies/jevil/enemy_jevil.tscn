@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/characters/jevil/asset_jevil.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://objects/enemies/jevil/enemy_jevil.gd" type="Script" id=2]
+
+[node name="enemy_jevil" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="shadow" type="Node2D" parent="."]
+position = Vector2( 0, 11 )
+
+[node name="shadow" type="ColorRect" parent="shadow"]
+margin_left = -13.0
+margin_top = -2.0
+margin_right = 13.0
+margin_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="spriteJoint" type="Node2D" parent="."]
+
+[node name="sprite" type="AnimatedSprite" parent="spriteJoint"]
+frames = ExtResource( 1 )
+animation = "bounce"
+frame = 7
+playing = true
+offset = Vector2( 0, -10 )

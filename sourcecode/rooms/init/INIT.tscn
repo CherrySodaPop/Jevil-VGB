@@ -24,24 +24,8 @@ stream = ExtResource( 6 )
 volume_db = 6.0
 
 [node name="VOICE0" parent="." instance=ExtResource( 3 )]
-position = Vector2( -25, -40 )
-
-[node name="VOICE1" parent="." instance=ExtResource( 3 )]
-position = Vector2( -73, -40 )
-WORDS = "YOU SHOULDN'T BE HERE."
-
-[node name="VOICE2" parent="." instance=ExtResource( 3 )]
-position = Vector2( -56, -40 )
-WORDS = "  THIS \"PLACE\" IS
-OUTSIDE MY \"REACH.\""
-
-[node name="VOICE3" parent="." instance=ExtResource( 3 )]
-position = Vector2( -63, -40 )
-WORDS = "DO YOU ACCEPT THIS?"
-
-[node name="VOICE4" parent="." instance=ExtResource( 3 )]
-position = Vector2( -30, -40 )
-WORDS = "VERY WELL."
+position = Vector2( -46, -40 )
+WORDS = "SHALL WE BEGIN?"
 
 [node name="SOUL" type="Sprite" parent="."]
 visible = false
