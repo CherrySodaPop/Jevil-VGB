@@ -25,7 +25,6 @@ __meta__ = {
 
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint"]
 frames = ExtResource( 1 )
-animation = "bounce"
-frame = 7
+animation = "idle"
 playing = true
 offset = Vector2( 0, -10 )
