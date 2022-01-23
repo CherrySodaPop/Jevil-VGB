@@ -19,13 +19,25 @@ var battleSpecialAttack:bool = false;
 
 var SOUL_BOX_ROTATION:float = 0.0;
 
+var revolveTheWorld:bool = false;
+var carouselAlpha:float = 0.0;
+
+var attack0 = preload("res://objects/battle/attacks/jevil/attack0/jevil_attack0.tscn");
+var attack1 = preload("res://objects/battle/attacks/jevil/attack1/jevil_attack1.tscn");
+var attack2 = preload("res://objects/battle/attacks/jevil/attack2/jevil_attack2.tscn");
+
 func _ready():
-	pass
+	$AnimationPlayer.play("intro");
 
 func _process(delta):
 	lifeTimer += delta;
-	$world/jevilBackground3D/Viewport/jevilBackground/jevilFloor.rotate_y(1.25 * delta);
-	$world/jevilBackground3D/Viewport/jevilBackground/jevilCarousel.rotate_object_local(Vector3.UP,-0.75 * delta);
+	if (revolveTheWorld):
+		$world/jevilBackground3D/Viewport/jevilBackground/jevilFloor.rotate_y(1.25 * delta);
+		$world/jevilBackground3D/Viewport/jevilBackground/jevilCarousel.rotate_object_local(Vector3.UP,-0.75 * delta);
+		carouselAlpha = clamp(carouselAlpha + (delta * 0.05), 0.0, 0.05);
+	else:
+		carouselAlpha = clamp(carouselAlpha - (delta * 0.05), 0.0, 0.05);
+	$world/jevilBackground3D/Viewport/jevilBackground/jevilCarousel/jevilCarousel.mesh.surface_get_material(0).set_emission_energy(carouselAlpha);
 	
 	HandleBattle(delta);
 	HandleBattleHud(delta);
@@ -70,10 +82,16 @@ func HandleAttack():
 		battleSpecialAttack = true;
 	
 	if (battleEnemyAttackCount == 0):
+		var tmpScene = attack1.instance();
+		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 1):
+		var tmpScene = attack0.instance();
+		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 2):
+		var tmpScene = attack2.instance();
+		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 3):
 		return;
@@ -105,9 +123,10 @@ func HandleBattleHud(delta):
 	if (battleReady):
 		if (Input.is_action_just_pressed("confirm")):
 			if (battleSelectionHud == 0):
-				$enemy_jevil.wireHealth -= battleWireDamage;
+				$enemy_jevil.sleepHealth -= battleWireDamage;
 			if (battleSelectionHud == 1):
 				$enemy_jevil.health -= battleDamage + int(rand_range(-battleDamageRandomRange/2,battleDamageRandomRange/2));
+				$enemy_jevil.damageAmp = 30;
 			if (battleSelectionHud == 2):
 				$USER_SOUL.guard = true;
 			
@@ -159,4 +178,5 @@ func ExitAttack():
 func SHARK_TO_SHARK():
 	battleReady = true;
 	battleShowHud = true;
+	revolveTheWorld = true;
 	#$worldRevolving.playing = true;

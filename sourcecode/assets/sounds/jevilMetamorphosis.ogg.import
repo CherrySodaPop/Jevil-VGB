@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jevilMetamorphosis.ogg-8d96437769c58a9712b68c98868c6efc.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/jevilMetamorphosis.ogg"
+dest_files=[ "res://.import/jevilMetamorphosis.ogg-8d96437769c58a9712b68c98868c6efc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://objects/battle/attacks/jevil/attack2/jevil_attack2.gd" type="Script" id=1]
+
+[node name="jevil_attack2" type="Node2D"]
+script = ExtResource( 1 )

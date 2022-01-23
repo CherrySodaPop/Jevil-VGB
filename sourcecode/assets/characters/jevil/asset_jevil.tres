@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=10 format=2]
+[gd_resource type="SpriteFrames" load_steps=19 format=2]
 
 [ext_resource path="res://assets/characters/jevil/spr_jevil_Bounce3.png" type="Texture" id=1]
 [ext_resource path="res://assets/characters/jevil/spr_jevil_Bounce6.png" type="Texture" id=2]
@@ -9,6 +9,15 @@
 [ext_resource path="res://assets/characters/jevil/spr_jevil_Bounce0.png" type="Texture" id=7]
 [ext_resource path="res://assets/characters/jevil/spr_jevil_Bounce1.png" type="Texture" id=8]
 [ext_resource path="res://assets/characters/jevil/spr_jevil_leftIdle.png" type="Texture" id=9]
+[ext_resource path="res://assets/characters/jevil/spr_jevil_leftLaugh.png" type="Texture" id=10]
+[ext_resource path="res://assets/characters/jevil/spr_jevil_headempty.png" type="Texture" id=11]
+[ext_resource path="res://assets/characters/jevil/spr_jevil_shock.png" type="Texture" id=12]
+[ext_resource path="res://assets/characters/jevil/spr_bombSpade0.png" type="Texture" id=13]
+[ext_resource path="res://assets/characters/jevil/spr_bombHeart1.png" type="Texture" id=14]
+[ext_resource path="res://assets/characters/jevil/spr_bombSpade1.png" type="Texture" id=15]
+[ext_resource path="res://assets/characters/jevil/spr_bombHeart0.png" type="Texture" id=16]
+[ext_resource path="res://assets/characters/jevil/spr_bombClub0.png" type="Texture" id=17]
+[ext_resource path="res://assets/characters/jevil/spr_bombClub1.png" type="Texture" id=18]
 
 [resource]
 animations = [ {
@@ -20,5 +29,35 @@ animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "headempty",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "laugh",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "shock",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "bombSpade",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 14 ) ],
+"loop": true,
+"name": "bombHeart",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "bombClub",
 "speed": 5.0
 } ]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jevilGiggle0.ogg-fc81515cdd8b5364ea827e0d769a3e11.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/jevilGiggle0.ogg"
+dest_files=[ "res://.import/jevilGiggle0.ogg-fc81515cdd8b5364ea827e0d769a3e11.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jevilOh.ogg-402eaf740363007d0a962870cb506964.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/jevilOh.ogg"
+dest_files=[ "res://.import/jevilOh.ogg-402eaf740363007d0a962870cb506964.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

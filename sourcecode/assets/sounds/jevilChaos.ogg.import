@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jevilChaos.ogg-6881757e6312fe971f88ab97c50081b1.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/jevilChaos.ogg"
+dest_files=[ "res://.import/jevilChaos.ogg-6881757e6312fe971f88ab97c50081b1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

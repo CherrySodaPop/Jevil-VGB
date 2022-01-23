@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/sounds/sndJevilChaos.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/battle/attacks/jevil/attack1/jevil_attack1.gd" type="Script" id=2]
+
+[node name="jevil_attack1" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="sndJevilChaos" parent="." instance=ExtResource( 1 )]

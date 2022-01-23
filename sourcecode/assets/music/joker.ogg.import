@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/joker.ogg-23160fc721740ff54e231f136ef6306a.oggstr"
+
+[deps]
+
+source_file="res://assets/music/joker.ogg"
+dest_files=[ "res://.import/joker.ogg-23160fc721740ff54e231f136ef6306a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

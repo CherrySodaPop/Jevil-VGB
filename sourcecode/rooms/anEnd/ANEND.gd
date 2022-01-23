@@ -23,7 +23,7 @@ func _process(delta):
 		IMPATIENTDELAY = 0.0;
 	
 	if (IMPATIENT >= 8):
-		get_tree().change_scene("res://rooms/spamtonNeoFight/spamtonFight.tscn");
+		get_tree().change_scene("res://rooms/jevilFight/jevilFight.tscn");
 		
 	if (IMPATIENT != 0):
 		IMPATIENTDELAY += delta;
@@ -85,7 +85,7 @@ func _process(delta):
 		
 		if (9.0 >= HESITATEFINAL && HESITATEFINAL >= 8.0):
 			if (USER_CHOICE == 0):
-				get_tree().change_scene("res://rooms/spamtonNeoFight/spamtonFight.tscn");
+				get_tree().change_scene("res://rooms/jevilFight/jevilFight.tscn");
 			else:
 				if (!$DARKER.playing):
 					$VOICE3.visible = false;

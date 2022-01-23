@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/characters/jevil/asset_jevil.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://objects/battle/projectiles/jevil/patternLittleGuyJevil.gd" type="Script" id=2]
+
+[node name="patternLittleGuyJevil" type="AnimatedSprite"]
+frames = ExtResource( 1 )
+animation = "idle"
+script = ExtResource( 2 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jevilHa1.ogg-f6eb17827f8af5d13efac50329691480.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/jevilHa1.ogg"
+dest_files=[ "res://.import/jevilHa1.ogg-f6eb17827f8af5d13efac50329691480.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

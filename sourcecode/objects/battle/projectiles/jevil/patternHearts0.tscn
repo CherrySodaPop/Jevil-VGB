@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/battle/projectiles/jevil/projHeart.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/battle/projectiles/jevil/patternHearts0.gd" type="Script" id=2]
+
+[node name="patternHearts0" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="projHeart0" parent="." instance=ExtResource( 1 )]
+position = Vector2( -20, 0 )
+
+[node name="projHeart1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -20 )
+
+[node name="projHeart2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 20, 0 )
+
+[node name="projHeart3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 20 )

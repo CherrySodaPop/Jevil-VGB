@@ -1,7 +1,12 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/characters/jevil/asset_jevil.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://objects/enemies/jevil/enemy_jevil.gd" type="Script" id=2]
+[ext_resource path="res://assets/characters/jevil/spr_jevil_chain.png" type="Texture" id=3]
+[ext_resource path="res://assets/characters/jevil/spr_jevil_head.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/jevilHa1.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/jevilHa0.ogg" type="AudioStream" id=6]
+[ext_resource path="res://assets/sounds/enemyHurtSound.ogg" type="AudioStream" id=7]
 
 [node name="enemy_jevil" type="Node2D"]
 script = ExtResource( 2 )
@@ -25,6 +30,40 @@ __meta__ = {
 
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint"]
 frames = ExtResource( 1 )
-animation = "idle"
+animation = "laugh"
 playing = true
 offset = Vector2( 0, -10 )
+
+[node name="chainJoint" type="Node2D" parent="spriteJoint"]
+visible = false
+
+[node name="chain0" type="Sprite" parent="spriteJoint/chainJoint"]
+position = Vector2( 1, -10 )
+texture = ExtResource( 3 )
+
+[node name="chain1" type="Sprite" parent="spriteJoint/chainJoint"]
+position = Vector2( 1, -10 )
+texture = ExtResource( 3 )
+
+[node name="chain2" type="Sprite" parent="spriteJoint/chainJoint"]
+position = Vector2( 1, -10 )
+texture = ExtResource( 3 )
+
+[node name="chain3" type="Sprite" parent="spriteJoint/chainJoint"]
+position = Vector2( 1, -10 )
+texture = ExtResource( 3 )
+
+[node name="head" type="Sprite" parent="spriteJoint"]
+visible = false
+position = Vector2( 1, -14 )
+texture = ExtResource( 4 )
+
+[node name="ha0" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="ha1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+
+[node name="hurt" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = 10.0
