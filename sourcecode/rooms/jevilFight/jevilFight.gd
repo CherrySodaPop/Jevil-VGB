@@ -25,6 +25,7 @@ var carouselAlpha:float = 0.0;
 var attack0 = preload("res://objects/battle/attacks/jevil/attack0/jevil_attack0.tscn");
 var attack1 = preload("res://objects/battle/attacks/jevil/attack1/jevil_attack1.tscn");
 var attack2 = preload("res://objects/battle/attacks/jevil/attack2/jevil_attack2.tscn");
+var attack3 = preload("res://objects/battle/attacks/jevil/attack3/jevil_attack3.tscn");
 
 func _ready():
 	$AnimationPlayer.play("intro");
@@ -94,6 +95,8 @@ func HandleAttack():
 		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 3):
+		var tmpScene = attack3.instance();
+		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 4):
 		return;

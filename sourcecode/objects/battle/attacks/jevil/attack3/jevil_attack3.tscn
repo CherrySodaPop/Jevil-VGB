@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://objects/battle/projectiles/jevil/patternDevilsKnifeQuad.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/battle/attacks/jevil/attack3/jevil_attack3.gd" type="Script" id=2]
+
+[node name="jevil_attack3" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="patternDevilsKnifeQuad" parent="." instance=ExtResource( 1 )]
