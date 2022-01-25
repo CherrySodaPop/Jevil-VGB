@@ -294,6 +294,7 @@ stream = ExtResource( 13 )
 stream = ExtResource( 14 )
 
 [node name="world" type="Node2D" parent="."]
+z_index = -1
 
 [node name="jevilBackground3D" type="ViewportContainer" parent="world"]
 margin_left = -90.0

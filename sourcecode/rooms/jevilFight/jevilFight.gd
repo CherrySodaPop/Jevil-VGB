@@ -26,6 +26,8 @@ var attack0 = preload("res://objects/battle/attacks/jevil/attack0/jevil_attack0.
 var attack1 = preload("res://objects/battle/attacks/jevil/attack1/jevil_attack1.tscn");
 var attack2 = preload("res://objects/battle/attacks/jevil/attack2/jevil_attack2.tscn");
 var attack3 = preload("res://objects/battle/attacks/jevil/attack3/jevil_attack3.tscn");
+var attack4 = preload("res://objects/battle/attacks/jevil/attack4/jevil_attack4.tscn");
+var attack5 = preload("res://objects/battle/attacks/jevil/attack5/jevil_attack5.tscn");
 
 func _ready():
 	$AnimationPlayer.play("intro");
@@ -99,8 +101,12 @@ func HandleAttack():
 		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 4):
+		var tmpScene = attack4.instance();
+		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleEnemyAttackCount == 5):
+		var tmpScene = attack5.instance();
+		get_tree().current_scene.add_child(tmpScene);
 		return;
 	if (battleSpecialAttack && battleEnemyAttackCount == 6):
 		return;

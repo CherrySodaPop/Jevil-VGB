@@ -1,6 +1,7 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://objects/battle/projectiles/jevil/projSpadeJevil.tscn" type="PackedScene" id=2]
+[ext_resource path="res://objects/battle/projectiles/jevil/projSpade.tscn" type="PackedScene" id=2]
+
 
 [node name="patternSpades1Jevil" type="Node2D"]
 
