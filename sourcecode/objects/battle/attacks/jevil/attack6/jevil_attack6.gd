@@ -13,9 +13,10 @@ func _process(delta):
 	lifeTimer += delta;
 	attackTimer += delta;
 	
-	if (attackTimer >= 1.0):
+	if (attackTimer >= 0.7):
 		var tmpScene = bomb.instance();
 		add_child(tmpScene);
+		tmpScene.explosionType = 1;
 		
 		if (!attackSide):
 			tmpScene.global_transform.origin.x = -66;

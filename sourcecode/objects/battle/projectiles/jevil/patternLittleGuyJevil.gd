@@ -4,7 +4,7 @@ export (float) var explodeTime:float = 0.75;
 var lifeTimer:float = 0.0;
 var attackSide:bool = false; # false = facing right, true = facing left
 var exploded:bool = false;
-var spades = preload("res://objects/battle/projectiles/jevil/patternSpades1Jevil.tscn")
+var spades = preload("res://objects/battle/projectiles/jevil/patternSpades1.tscn")
 var sndOh = preload("res://objects/sounds/sndJevilOh.tscn");
 
 func _ready():

@@ -28,6 +28,7 @@ var attack2 = preload("res://objects/battle/attacks/jevil/attack2/jevil_attack2.
 var attack3 = preload("res://objects/battle/attacks/jevil/attack3/jevil_attack3.tscn");
 var attack4 = preload("res://objects/battle/attacks/jevil/attack4/jevil_attack4.tscn");
 var attack5 = preload("res://objects/battle/attacks/jevil/attack5/jevil_attack5.tscn");
+var attack6 = preload("res://objects/battle/attacks/jevil/attack6/jevil_attack6.tscn");
 
 func _ready():
 	$AnimationPlayer.play("intro");
@@ -80,7 +81,7 @@ func HandleBattle(delta):
 
 func HandleAttack():
 	if (!battleSpecialAttack && ($enemy_jevil.health <= 1000 || $enemy_jevil.sleepHealth <= 15)):
-		battleEnemyAttackCount = 6;
+		battleEnemyAttackCount = 7;
 		battleIncreaseDifficulty = true;
 		battleSpecialAttack = true;
 	
@@ -108,7 +109,11 @@ func HandleAttack():
 		var tmpScene = attack5.instance();
 		get_tree().current_scene.add_child(tmpScene);
 		return;
-	if (battleSpecialAttack && battleEnemyAttackCount == 6):
+	if (battleEnemyAttackCount == 6):
+		var tmpScene = attack6.instance();
+		get_tree().current_scene.add_child(tmpScene);
+		battleEnemyAttackCount = -1;
+	if (battleSpecialAttack && battleEnemyAttackCount == 7):
 		return;
 
 func HandleBattleHud(delta):

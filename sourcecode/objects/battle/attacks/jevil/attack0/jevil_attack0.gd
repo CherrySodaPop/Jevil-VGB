@@ -4,7 +4,7 @@ var lifeTimer:float = 0.0;
 
 var spadeCreationTime = 2.0;
 var spadeCreationFreq = 2.0;
-var pattern0 = preload("res://objects/battle/projectiles/jevil/patternSpades0Jevil.tscn");
+var pattern0 = preload("res://objects/battle/projectiles/jevil/patternSpades0.tscn");
 
 func _ready():
 	pass

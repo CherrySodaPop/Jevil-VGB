@@ -58,6 +58,48 @@ visible = false
 position = Vector2( 1, -14 )
 texture = ExtResource( 4 )
 
+[node name="multipleJevils" type="Node2D" parent="spriteJoint"]
+visible = false
+
+[node name="jevil0" type="Node2D" parent="spriteJoint/multipleJevils"]
+position = Vector2( -4, -22 )
+
+[node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil0"]
+frames = ExtResource( 1 )
+animation = "bounce"
+speed_scale = 1.5
+playing = true
+
+[node name="jevil1" type="Node2D" parent="spriteJoint/multipleJevils"]
+position = Vector2( -14, 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil1"]
+frames = ExtResource( 1 )
+animation = "bounce"
+frame = 7
+speed_scale = 1.5
+playing = true
+
+[node name="jevil2" type="Node2D" parent="spriteJoint/multipleJevils"]
+position = Vector2( 5, -1 )
+
+[node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil2"]
+frames = ExtResource( 1 )
+animation = "bounce"
+frame = 7
+speed_scale = 1.5
+playing = true
+
+[node name="jevil3" type="Node2D" parent="spriteJoint/multipleJevils"]
+position = Vector2( -5, -6 )
+
+[node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil3"]
+frames = ExtResource( 1 )
+animation = "bounce"
+frame = 6
+speed_scale = 1.5
+playing = true
+
 [node name="ha0" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 

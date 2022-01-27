@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://objects/battle/projectiles/jevil/projSpade.tscn" type="PackedScene" id=1]
+
+[node name="patternSpades1" type="Node2D"]
+
+[node name="projSpadeJevil1" parent="." instance=ExtResource( 1 )]
+rotation = -3.66519
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
+
+[node name="projSpadeJevil2" parent="." instance=ExtResource( 1 )]
+rotation = 2.35619
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
+
+[node name="projSpadeJevil3" parent="." instance=ExtResource( 1 )]
+rotation = 1.83259
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
+
+[node name="projSpadeJevil4" parent="." instance=ExtResource( 1 )]
+rotation = -4.71238
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
+
+[node name="projSpadeJevil5" parent="." instance=ExtResource( 1 )]
+rotation = -4.97418
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
+
+[node name="projSpadeJevil6" parent="." instance=ExtResource( 1 )]
+rotation = -5.49778
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
+
+[node name="projSpadeJevil7" parent="." instance=ExtResource( 1 )]
+rotation = -5.75958
+pullForce = 0.0
+moveDir = Vector2( 0, -60 )
