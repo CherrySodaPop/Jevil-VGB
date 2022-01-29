@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://objects/battle/projectiles/jevil/projCarousel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/battle/attacks/jevil/attack5/jevil_attack5.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/jevilAnything.ogg" type="AudioStream" id=3]
 
 [node name="jevil_attack5" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="anything" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
 
 [node name="row0" type="Node2D" parent="."]
 position = Vector2( -40, 0 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assets/characters/jevil/asset_jevil.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://objects/enemies/jevil/enemy_jevil.gd" type="Script" id=2]
@@ -7,6 +7,13 @@
 [ext_resource path="res://assets/sounds/jevilHa1.ogg" type="AudioStream" id=5]
 [ext_resource path="res://assets/sounds/jevilHa0.ogg" type="AudioStream" id=6]
 [ext_resource path="res://assets/sounds/enemyHurtSound.ogg" type="AudioStream" id=7]
+[ext_resource path="res://assets/sounds/jevilLaugh0.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assets/sounds/jevilMetamorphosis.ogg" type="AudioStream" id=9]
+[ext_resource path="res://assets/characters/jevil/spr_jevil_devilsknife.png" type="Texture" id=10]
+[ext_resource path="res://assets/battle/spr_hypnoRing0.png" type="Texture" id=11]
+[ext_resource path="res://assets/battle/spr_hypnoRing2.png" type="Texture" id=12]
+[ext_resource path="res://assets/battle/spr_hypnoRing1.png" type="Texture" id=13]
+[ext_resource path="res://assets/sounds/magicsprinkle.ogg" type="AudioStream" id=14]
 
 [node name="enemy_jevil" type="Node2D"]
 script = ExtResource( 2 )
@@ -30,7 +37,7 @@ __meta__ = {
 
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint"]
 frames = ExtResource( 1 )
-animation = "laugh"
+animation = "idle"
 playing = true
 offset = Vector2( 0, -10 )
 
@@ -67,6 +74,7 @@ position = Vector2( -4, -22 )
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil0"]
 frames = ExtResource( 1 )
 animation = "bounce"
+frame = 1
 speed_scale = 1.5
 playing = true
 
@@ -76,7 +84,7 @@ position = Vector2( -14, 1 )
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil1"]
 frames = ExtResource( 1 )
 animation = "bounce"
-frame = 7
+frame = 6
 speed_scale = 1.5
 playing = true
 
@@ -86,7 +94,7 @@ position = Vector2( 5, -1 )
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil2"]
 frames = ExtResource( 1 )
 animation = "bounce"
-frame = 7
+frame = 3
 speed_scale = 1.5
 playing = true
 
@@ -96,9 +104,29 @@ position = Vector2( -5, -6 )
 [node name="sprite" type="AnimatedSprite" parent="spriteJoint/multipleJevils/jevil3"]
 frames = ExtResource( 1 )
 animation = "bounce"
-frame = 6
+frame = 7
 speed_scale = 1.5
 playing = true
+
+[node name="dizzy" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="ring0" type="Sprite" parent="dizzy"]
+position = Vector2( 0, -19 )
+texture = ExtResource( 11 )
+
+[node name="ring1" type="Sprite" parent="dizzy"]
+position = Vector2( 0, -28 )
+texture = ExtResource( 13 )
+
+[node name="ring2" type="Sprite" parent="dizzy"]
+position = Vector2( 0, -43 )
+texture = ExtResource( 12 )
+
+[node name="devilsKnife" type="Sprite" parent="."]
+position = Vector2( 0, -12 )
+scale = Vector2( 1e-05, 1 )
+texture = ExtResource( 10 )
 
 [node name="ha0" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
@@ -109,3 +137,12 @@ stream = ExtResource( 5 )
 [node name="hurt" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
 volume_db = 10.0
+
+[node name="metamorphosis" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="laugh" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="dizzySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )

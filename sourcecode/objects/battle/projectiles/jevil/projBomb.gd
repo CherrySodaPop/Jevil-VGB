@@ -8,6 +8,7 @@ export (int) var explosionType = 0;
 
 var patternHearts = preload("res://objects/battle/projectiles/jevil/patternHearts0.tscn")
 var patternSpades = preload("res://objects/battle/projectiles/jevil/patternSpades2.tscn")
+var effectBoom = preload("res://objects/effects/effectExplode.tscn");
 
 func _ready():
 	pass
@@ -29,4 +30,7 @@ func _process(delta):
 		tmpScene.global_transform.origin = global_transform.origin;
 		tmpScene = sndExplode.instance();
 		get_tree().current_scene.add_child(tmpScene);
+		tmpScene = effectBoom.instance();
+		get_tree().current_scene.add_child(tmpScene);
+		tmpScene.global_transform.origin = global_transform.origin;
 		queue_free();

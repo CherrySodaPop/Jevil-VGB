@@ -100,5 +100,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Label3" type="Label" parent="Menu"]
+margin_left = -15.0
+margin_top = 33.0
+margin_right = 52.0
+margin_bottom = 47.0
+theme = ExtResource( 5 )
+text = "?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="AUDIO_STORY" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )

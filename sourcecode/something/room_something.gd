@@ -20,20 +20,20 @@ func _process(delta):
 	if (lifeTimer >= 15.0):
 		$text3.canSpeek = true;
 	
-	if (lifeTimer >= 19.0):
+	if (lifeTimer >= 22.0):
 		$text4.canSpeek = true;
 	
-	if (lifeTimer >= 24.0):
+	if (lifeTimer >= 27.0):
 		$text5.canSpeek = true;
 	
-	if (lifeTimer >= 29.0):
+	if (lifeTimer >= 33.0):
 		$text6.canSpeek = true;
 	
-	if (lifeTimer >= 35.0):
+	if (lifeTimer >= 40.0):
 		$text7.canSpeek = true;
 	
-	if (lifeTimer >= 41.0):
+	if (lifeTimer >= 48.0):
 		$text8.canSpeek = true;
 	
-	if (lifeTimer >= 47.0):
+	if (lifeTimer >= 54.0):
 		$text9.canSpeek = true;

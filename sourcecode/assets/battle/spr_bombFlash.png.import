@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spr_snap1.png-df28658548e05409fa576aa00db77bee.stex"
+path="res://.import/spr_bombFlash.png-3907bff26ad6d1299f5d9ac38755d145.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/battle/spr_snap1.png"
-dest_files=[ "res://.import/spr_snap1.png-df28658548e05409fa576aa00db77bee.stex" ]
+source_file="res://assets/battle/spr_bombFlash.png"
+dest_files=[ "res://.import/spr_bombFlash.png-3907bff26ad6d1299f5d9ac38755d145.stex" ]
 
 [params]
 

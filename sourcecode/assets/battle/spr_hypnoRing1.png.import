@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spr_guard1.png-2d816e97179b6f677c9b30ffd2e65171.stex"
+path="res://.import/spr_hypnoRing1.png-9621a32ec2060c7ec8ea11b11cf6da50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/battle/spr_guard1.png"
-dest_files=[ "res://.import/spr_guard1.png-2d816e97179b6f677c9b30ffd2e65171.stex" ]
+source_file="res://assets/battle/spr_hypnoRing1.png"
+dest_files=[ "res://.import/spr_hypnoRing1.png-9621a32ec2060c7ec8ea11b11cf6da50.stex" ]
 
 [params]
 

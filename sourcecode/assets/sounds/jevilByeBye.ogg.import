@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/jevilByeBye.ogg-411b4ecdf16dc131f55e0687832370f9.oggstr"
+
+[deps]
+
+source_file="res://assets/sounds/jevilByeBye.ogg"
+dest_files=[ "res://.import/jevilByeBye.ogg-411b4ecdf16dc131f55e0687832370f9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

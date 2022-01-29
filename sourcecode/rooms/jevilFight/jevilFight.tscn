@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/models/jevilFloor.tscn" type="PackedScene" id=1]
 [ext_resource path="res://objects/enemies/jevil/enemy_jevil.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/music/joker.ogg" type="AudioStream" id=13]
 [ext_resource path="res://assets/sounds/battlestart.ogg" type="AudioStream" id=14]
 [ext_resource path="res://assets/music/prejoker.ogg" type="AudioStream" id=15]
+[ext_resource path="res://assets/sounds/heal.ogg" type="AudioStream" id=16]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -286,12 +287,17 @@ volume_db = -3.0
 
 [node name="prejoker" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 15 )
+pitch_scale = 0.85
 
 [node name="joker" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 
 [node name="battleStart" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 14 )
+
+[node name="heal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = 11.0
 
 [node name="world" type="Node2D" parent="."]
 z_index = -1
@@ -438,17 +444,31 @@ points = PoolVector2Array( 0, 80, 180, 80 )
 width = 1.0
 default_color = Color( 0.67451, 0.882353, 0.329412, 1 )
 
-[node name="snap" type="AnimatedSprite" parent="BattleHud"]
+[node name="pacify" type="AnimatedSprite" parent="BattleHud"]
 position = Vector2( -69, -7 )
 frames = ExtResource( 5 )
-animation = "snap"
+animation = "pacify"
 
 [node name="fight" type="AnimatedSprite" parent="BattleHud"]
-position = Vector2( -46, -7 )
+position = Vector2( -45, -7 )
 frames = ExtResource( 5 )
 animation = "fight"
 
-[node name="guard" type="AnimatedSprite" parent="BattleHud"]
-position = Vector2( -22, -7 )
+[node name="heal" type="AnimatedSprite" parent="BattleHud"]
+position = Vector2( -24, -7 )
 frames = ExtResource( 5 )
-animation = "guard"
+animation = "heal"
+
+[node name="ExplosionOverlay" type="Node2D" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+z_index = 1
+
+[node name="ColorRect" type="ColorRect" parent="ExplosionOverlay"]
+margin_left = -92.0
+margin_top = -81.0
+margin_right = 92.0
+margin_bottom = 76.0
+color = Color( 0.67451, 0.882353, 0.329412, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
