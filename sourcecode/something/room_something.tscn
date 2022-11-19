@@ -1,64 +1,35 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://something/room_something.gd" type="Script" id=1]
 [ext_resource path="res://something/peerson.tscn" type="PackedScene" id=2]
+[ext_resource path="res://something/lunar.png" type="Texture" id=3]
 
 [node name="room_something" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="text0" parent="." instance=ExtResource( 2 )]
-position = Vector2( -21, -10 )
-words = "H-Hey!"
+position = Vector2( -45, -10 )
+words = "It's been a while."
 speed = 5.0
 
 [node name="text1" parent="." instance=ExtResource( 2 )]
-position = Vector2( -29, -10 )
-words = "Um- Hello!"
+position = Vector2( -77, -24 )
+words = "Things have gotten exciting.
+But some problems have
+gotten in the way..."
 speed = 5.0
 
 [node name="text2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -65, -17 )
-words = "Sorry... uh... you don't
-really know me."
+position = Vector2( -80, -16 )
+words = "But we'll still see each other.
+I promise."
 speed = 5.0
 
 [node name="text3" parent="." instance=ExtResource( 2 )]
-position = Vector2( -76, -15 )
-words = "...and honestly I don't really
-know you either..."
+position = Vector2( -29, -10 )
+words = "Until then."
 speed = 5.0
 
-[node name="text4" parent="." instance=ExtResource( 2 )]
-position = Vector2( -71, -10 )
-words = "But I wanted to say hello!"
-speed = 5.0
-
-[node name="text5" parent="." instance=ExtResource( 2 )]
-position = Vector2( -4, -9 )
-words = "..."
-speed = 5.0
-
-[node name="text6" parent="." instance=ExtResource( 2 )]
-position = Vector2( -71, -23 )
-words = "Look... I don't know where
-THIS is, but I wanna
-see you again."
-speed = 5.0
-
-[node name="text7" parent="." instance=ExtResource( 2 )]
-position = Vector2( -82, -25 )
-words = "Something's coming this year...
-And I might be able
-to see you there!"
-speed = 5.0
-
-[node name="text8" parent="." instance=ExtResource( 2 )]
-position = Vector2( -56, -20 )
-words = "Don't forget, alright!
-This year, 2022."
-speed = 5.0
-
-[node name="text9" parent="." instance=ExtResource( 2 )]
-position = Vector2( -19, -12 )
-words = "See ya!"
-speed = 5.0
+[node name="lunar" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
